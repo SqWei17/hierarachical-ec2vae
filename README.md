@@ -1,2 +1,2 @@
-# hierarachical-ec2vae
+# Hierarachical-EC2VAE
 ISMIR 2021
