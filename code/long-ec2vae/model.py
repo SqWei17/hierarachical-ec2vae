@@ -3,8 +3,8 @@ from torch import nn
 from torch.nn import functional as F
 from torch.distributions import Normal
 
-__all__ = ['VAEbar4', 'VAEbar2']
-class VAEbar4(nn.Module):
+__all__ = ['VAEbar8', 'VAEbar4']
+class VAEbar8(nn.Module):
     def __init__(self,
                  roll_dims,
                  hidden_dims,
@@ -14,7 +14,7 @@ class VAEbar4(nn.Module):
                  z2_dims,
                  n_step,
                  k=1000):
-        super(VAEbar4, self).__init__()
+        super(VAEbar8, self).__init__()
         self.gru_0 = nn.GRU(
             roll_dims + condition_dims,
             hidden_dims,
@@ -140,7 +140,7 @@ class VAEbar4(nn.Module):
 
 
 
-class VAEbar2(nn.Module):
+class VAEbar4(nn.Module):
     def __init__(self,
                  roll_dims,
                  hidden_dims,
@@ -150,7 +150,7 @@ class VAEbar2(nn.Module):
                  z2_dims,
                  n_step,
                  k=1000):
-        super(VAEbar2, self).__init__()
+        super(VAEbar4, self).__init__()
         self.gru_0 = nn.GRU(
             roll_dims + condition_dims,
             hidden_dims,
