@@ -5,7 +5,7 @@ import os
 import numpy as np
 import time
 from torch import nn
-from structure4512kl import Musicmodel
+from struacture import Musicmodel
 #from model import VAEbar2, VAEbar4
 # from data_loader import MusicArrayLoader
 from torch.autograd import Variable
@@ -50,7 +50,7 @@ def epoch_time(start_time, end_time):
 
 
 # some initialization
-with open('/home/sqwei/ec4vae/model_config.json') as f:
+with open('/home/model_config.json') as f:
     args = json.load(f)
 if not os.path.isdir('log'):
     os.mkdir('log')
